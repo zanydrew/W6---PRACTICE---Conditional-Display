@@ -5,7 +5,10 @@ import { JAVA_RESULTS, PYTHON_RESULTS, HTML_RESULTS, ENGLISH_RESULTS } from "./d
 function App() {
   return (
     <>
-      <Header batchName="PNC batch 2024" />
+      <header id="header">
+        <Header batchName="PNC batch 2024" />
+      </header>
+      
       <main className="scores-container">
           <Scores courseName="Java" results={JAVA_RESULTS} />
           <Scores courseName="HTML" results={HTML_RESULTS} />

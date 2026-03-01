@@ -2,9 +2,9 @@ import pnLogo from "../assets/pn-logo.png";
 
 export function Header({batchName}) {
     return (
-        <header id="header">
+        <div>
         <img src={pnLogo} alt="PN Logo" />
             <h1>Students results for {batchName}</h1>
-        </header>
+        </div>
     )
 }
