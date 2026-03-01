@@ -13,13 +13,15 @@ export function Scores({courseName, results}) {
                 <th>Last name</th>
                 <th>Score</th>
               </tr>
-            </thead>
-                    <tbody>
+                </thead>
+            <tbody>
                         {results.map((student, index) => (
                         <tr key={index}>
                             <td>{student.firstName}</td>
                             <td>{student.lastName}</td>
-                            <td>{student.score}</td>
+                                <td className={
+                                    student.score < 50 ? "warning" : ""
+                            }>{student.score}</td>
                         </tr>
                     ))}
             </tbody>
