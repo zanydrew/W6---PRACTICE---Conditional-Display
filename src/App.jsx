@@ -5,8 +5,11 @@ import { JAVA_RESULTS, PYTHON_RESULTS, HTML_RESULTS, ENGLISH_RESULTS } from "./d
 function App() {
   return (
     <>
-      <Header batchName="PNC batch 20424" />
-      {JAVA_RESULTS.map((Java, index) => <Scores key={index} firstname={Java.firstName} lastname={Java.lastName} score={Java.score}  />)}
+      <Header batchName="PNC batch 2024" />
+      <Scores courseName="Java" results={JAVA_RESULTS} />
+      <Scores courseName="HTML" results={HTML_RESULTS} />
+      <Scores courseName="Python" results={PYTHON_RESULTS} />
+      <Scores courseName="English" results={ENGLISH_RESULTS} />
     </>
   );
 }

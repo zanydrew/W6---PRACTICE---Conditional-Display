@@ -1,6 +1,6 @@
 
 
-export function Scores({courseName}, {firstName, lastName,score}) {
+export function Scores({courseName, results}) {
     return (
         <main className="scores-container">
         <div class="scores">
@@ -14,12 +14,14 @@ export function Scores({courseName}, {firstName, lastName,score}) {
                 <th>Score</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                            <td>{firstName}</td>
-                            <td>{lastName}</td>
-                            <td>{score}</td>
-              </tr>
+                    <tbody>
+                        {results.map((student, index) => (
+                        <tr key={index}>
+                            <td>{student.firstName}</td>
+                            <td>{student.lastName}</td>
+                            <td>{student.score}</td>
+                        </tr>
+                    ))}
             </tbody>
           </table>
         </div>
