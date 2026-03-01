@@ -2,7 +2,6 @@
 
 export function Scores({courseName, results}) {
     return (
-        <main className="scores-container">
         <div class="scores">
                 <h1>{courseName}</h1>
 
@@ -27,6 +26,5 @@ export function Scores({courseName, results}) {
             </tbody>
           </table>
         </div>
-      </main>
     )
 }
